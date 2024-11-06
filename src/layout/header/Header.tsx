@@ -15,10 +15,10 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   padding-top: 25px;
-  padding-bottom: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80%;
   margin: 0 auto;
+  margin-bottom: 150px;
 `;

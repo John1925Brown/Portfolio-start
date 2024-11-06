@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import photoUrl from '../../assets/images/Hero.webp';
-import { StyledLinkBtn } from '../../components/linkBtn/LinkBtn';
-import { FlexWrapper } from '../../components/FlexWrapper';
+import photoUrl from '../../../assets/images/Hero.webp';
+import { StyledLinkBtn } from '../../../components/linkBtn/LinkBtn';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { Photo } from '../../../components/Photo';
 
 export const Main = () => {
   return (
@@ -16,7 +17,13 @@ export const Main = () => {
           </Description>
           <StyledLinkBtn width="240px"> Let’s Begin</StyledLinkBtn>
         </div>
-        <Photo src={photoUrl} alt="Hero" />
+        <Photo
+          src={photoUrl}
+          width="380px"
+          height="450px"
+          radius="50px 0"
+          alt="Hero"
+        />
       </FlexWrapper>
     </StyledMain>
   );
@@ -24,15 +31,8 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   width: 80%;
-  padding: 125px 0 125px 0;
   margin: 0 auto;
-`;
-
-const Photo = styled.img`
-  width: 380px;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 50px 0;
+  margin-bottom: 125px;
 `;
 
 const Title = styled.h1`

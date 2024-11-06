@@ -3,12 +3,30 @@ import { Logo } from '../../components/logo/Logo';
 import { Menu } from '../../components/menu/Menu';
 import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
 
+const headerSvgsGroup = [
+  {
+    width: 35,
+    height: 30,
+    iconId: 'codeGithub',
+  },
+  {
+    width: 35,
+    height: 30,
+    iconId: 'codeLinkedin',
+  },
+  {
+    width: 35,
+    height: 30,
+    iconId: 'codeTelegram',
+  },
+];
+
 export const Header = () => {
   return (
     <StyledHeader>
       <Logo />
       <Menu />
-      <AccountsGroup />
+      <AccountsGroup svgGroup={headerSvgsGroup} />
     </StyledHeader>
   );
 };

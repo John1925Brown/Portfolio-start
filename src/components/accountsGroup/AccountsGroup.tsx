@@ -1,21 +1,25 @@
 import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
 
-export const AccountsGroup = () => {
+export const AccountsGroup = (props: { svgGroup: Array<object> }) => {
   return (
     <StyledAccountsGroup>
-      <a href="#">
-        <Icon iconId={'codeGithub'} width={35} height={30} />
-      </a>
-      <a href="#">
-        <Icon iconId={'codeLinkedin'} width={35} height={30} />
-      </a>
-      <a href="#">
-        <Icon iconId={'codeTelegram'} width={35} height={30} />
-      </a>
+      {props.svgGroup.map((image, index) => {
+        return (
+          <a href="#" key={index}>
+            <Icon
+              iconId={image.iconId}
+              width={image.width}
+              height={image.height}
+            />
+          </a>
+        );
+      })}
     </StyledAccountsGroup>
   );
 };
+
+// Поменять гэп!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 const StyledAccountsGroup = styled.div`
   display: flex;

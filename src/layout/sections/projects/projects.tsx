@@ -26,7 +26,6 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  margin-bottom: 140px;
   background: #161d2a;
 `;
 

@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
 
-export const AccountsGroup = (props: { svgGroup: Array<object> }) => {
+type TypeImage = {
+  iconId: string;
+  width: number;
+  height: number;
+};
+
+export const AccountsGroup = (props: { svgGroup: Array<TypeImage> }) => {
   return (
     <StyledAccountsGroup>
       {props.svgGroup.map((image, index) => {

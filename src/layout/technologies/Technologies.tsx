@@ -3,17 +3,33 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
 
-export const Technologies = (props: {
-  skills: Array<object>;
-  techsSvgsGroup: Array<object>;
-}) => {
+type TypeSkill = {
+  valueTitle: string;
+  value: string;
+};
+
+const techsSvgsGroup = [
+  {
+    width: 100,
+    height: 100,
+    iconId: 'codeNpm',
+  },
+  {
+    width: 100,
+    height: 100,
+    iconId: 'codeGitHubColor',
+  },
+  {
+    width: 100,
+    height: 100,
+    iconId: 'codeFigma',
+  },
+];
+
+export const Technologies = (props: { skills: Array<TypeSkill> }) => {
   return (
     <StyledTechnologies>
       <SectionTitle title="Technologies" />
-
-      {/*<ProgressText>{skill.valueTitle}</ProgressText>
-              <progress max="100" value={skill.value}></progress>
-              Ошибки Property 'valueTitle' does not exist on type 'object'. */}
 
       <ProgressContainer>
         <FlexWrapper direction="column" align="center" gap="25px">
@@ -31,7 +47,7 @@ export const Technologies = (props: {
       <AddTitleTechs>Additional technologies and skills</AddTitleTechs>
 
       <FlexWrapper content="center">
-        <AccountsGroup svgGroup={props.techsSvgsGroup} />
+        <AccountsGroup svgGroup={techsSvgsGroup} />
       </FlexWrapper>
     </StyledTechnologies>
   );

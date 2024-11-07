@@ -1,4 +1,5 @@
 import './App.css';
+import { Footer } from './layout/footer/Footer';
 import { Header } from './layout/header/Header';
 import { Experience } from './layout/sections/experience/Experience';
 import { Main } from './layout/sections/main/Main';
@@ -24,6 +25,7 @@ function App() {
       <Projects />
       <Technologies skills={mySkills} />
       <Experience />
+      <Footer />
     </>
   );
 }

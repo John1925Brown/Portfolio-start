@@ -1,10 +1,11 @@
 import './App.css';
 import { Header } from './layout/header/Header';
+import { Experience } from './layout/sections/experience/Experience';
 import { Main } from './layout/sections/main/Main';
 import { Projects } from './layout/sections/projects/projects';
 import { Technologies } from './layout/technologies/Technologies';
 
-// Куда-то убрать массивы!!!
+// Куда-то убрать массив!!
 
 const mySkills = [
   { valueTitle: 'Html', value: '80' },
@@ -15,31 +16,14 @@ const mySkills = [
   { valueTitle: 'TS', value: '60' },
 ];
 
-const techsSvgsGroup = [
-  {
-    width: 100,
-    height: 100,
-    iconId: 'codeNpm',
-  },
-  {
-    width: 100,
-    height: 100,
-    iconId: 'codeGitHubColor',
-  },
-  {
-    width: 100,
-    height: 100,
-    iconId: 'codeFigma',
-  },
-];
-
 function App() {
   return (
     <>
       <Header />;
       <Main />
       <Projects />
-      <Technologies skills={mySkills} techsSvgsGroup={techsSvgsGroup} />
+      <Technologies skills={mySkills} />
+      <Experience />
     </>
   );
 }

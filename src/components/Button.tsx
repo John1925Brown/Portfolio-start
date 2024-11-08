@@ -1,13 +1,16 @@
 import styled from 'styled-components';
-import { theme } from '../../styles/theme';
+import { theme } from '../styles/theme';
 
-type LinkBtnType = {
+type ButtonType = {
   width?: string;
 };
 
-export const StyledLinkBtn = styled.a<LinkBtnType>`
+export const Button = styled.button<ButtonType>`
   display: flex;
   justify-content: center;
+  color: ${theme.colors.font};
+  margin: 0 auto;
+  margin-top: 15px;
   font-weight: 600;
   font-size: 20px;
   padding-top: 15px;

@@ -1,13 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
-import { Theme } from './Theme';
+import { theme } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
+
 body {
   position: relative;
   overflow-x: hidden;
   font-size: 16px;
   background-color: #fff;
   font-weight: 500;
+}
+
+section{
+  padding-bottom: 140px;
 }
 
 :root {
@@ -77,8 +82,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: ${Theme.colors.primaryBg};
-  color: ${Theme.colors.font}
+  background-color: ${theme.colors.primaryBg};
+  color: ${theme.colors.font}
 }
 
 code {

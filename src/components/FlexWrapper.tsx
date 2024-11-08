@@ -11,8 +11,8 @@ type TypeFlexWrapper = {
 export const FlexWrapper = styled.div<TypeFlexWrapper>`
   display: flex;
   flex-direction: ${(props) => props.direction || 'row'};
-  justify-content: ${(props) => props.content || 'flex-start'};
+  justify-content: ${(props) => props.content || 'start'};
   align-items: ${(props) => props.align || 'stretch'};
-  flex-wrap: ${(props) => props.wrap || 'no-wrap'};
+  flex-wrap: ${(props) => props.wrap || 'nowrap'};
   gap: ${(props) => props.gap || 0};
 `;

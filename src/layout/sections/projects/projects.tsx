@@ -7,7 +7,8 @@ import project1Path from '../../../assets/images/project-1.jpg';
 import project2Path from '../../../assets/images/project-2.jpg';
 import project3Path from '../../../assets/images/project-3.jpg';
 import project4Path from '../../../assets/images/project-4.jpg';
-import { Theme } from '../../../styles/Theme';
+
+import { theme } from '../../../styles/theme';
 import { Container } from '../../../components/Container';
 
 export const Projects = () => {
@@ -15,7 +16,9 @@ export const Projects = () => {
     <StyledProjects>
       <Container>
         <SectionTitle title="Projects"></SectionTitle>
+
         {/* Переделать на грид!!! */}
+
         <FlexWrapper wrap="wrap" content="space-between" gap=" 60px 0">
           <Project src={project1Path} titleValue="PROJECT 1" />
           <Project src={project2Path} titleValue="PROJECT 2" />
@@ -28,6 +31,5 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  background: ${Theme.colors.secondaryBg};
-  padding-bottom: 140px;
+  background: ${theme.colors.secondaryBg};
 `;

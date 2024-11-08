@@ -7,7 +7,7 @@ import { Container } from '../../../components/Container';
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <section>
       <Container>
         <FlexWrapper content="space-around">
           <div>
@@ -28,13 +28,9 @@ export const Main = () => {
           />
         </FlexWrapper>
       </Container>
-    </StyledMain>
+    </section>
   );
 };
-
-const StyledMain = styled.section`
-  margin-bottom: 125px;
-`;
 
 const Title = styled.h1`
   font-weight: 600;

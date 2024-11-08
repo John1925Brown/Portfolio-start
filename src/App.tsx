@@ -2,6 +2,7 @@ import './App.css';
 import { Footer } from './layout/footer/Footer';
 import { Header } from './layout/header/Header';
 import { Experience } from './layout/sections/experience/Experience';
+import { Contacts } from './layout/sections/form/Form';
 import { Main } from './layout/sections/main/Main';
 import { Projects } from './layout/sections/projects/projects';
 import { Technologies } from './layout/technologies/Technologies';
@@ -25,6 +26,7 @@ function App() {
       <Projects />
       <Technologies skills={mySkills} />
       <Experience />
+      <Contacts />
       <Footer />
     </>
   );

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Container } from '../../../components/Container';
-import { Theme } from '../../../styles/Theme';
+import { theme } from '../../../styles/theme';
 
 export const Experience = () => {
   return (
@@ -15,7 +15,7 @@ export const Experience = () => {
           <Year>2021</Year>
           <Year>2023</Year>
         </TimeLine>
-        <FlexWrapper content="space-between">
+        <FlexWrapper content="space-between" gap="15px">
           <Description>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor t ut labore et dolore magna aliqua.
@@ -39,8 +39,7 @@ export const Experience = () => {
 };
 
 const StyledExperience = styled.section`
-  padding: 100px 0 140px 0;
-  background-color: ${Theme.colors.secondaryBg};
+  background-color: ${theme.colors.secondaryBg};
 `;
 
 const TimeLine = styled.div`
@@ -55,7 +54,7 @@ const TimeLine = styled.div`
     content: '';
     width: 94%;
     height: 8px;
-    background: ${Theme.colors.gradientBg};
+    background: ${theme.colors.gradientBg};
     border-radius: 83px;
     position: absolute;
     left: 3%;

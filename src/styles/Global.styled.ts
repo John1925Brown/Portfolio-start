@@ -1,8 +1,13 @@
+import { createGlobalStyle } from 'styled-components';
+import { Theme } from './Theme';
+
+export const GlobalStyle = createGlobalStyle`
 body {
   position: relative;
   overflow-x: hidden;
   font-size: 16px;
   background-color: #fff;
+  font-weight: 500;
 }
 
 :root {
@@ -67,15 +72,18 @@ iframe {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0f1624;
+  background-color: ${Theme.colors.primaryBg};
+  color: ${Theme.colors.font}
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+`;

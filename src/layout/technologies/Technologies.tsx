@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { SectionTitle } from '../../components/SectionTitle';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
+import { Container } from '../../components/Container';
+import { Theme } from '../../styles/Theme';
 
 type TypeSkill = {
   valueTitle: string;
@@ -29,33 +31,33 @@ const techsSvgsGroup = [
 export const Technologies = (props: { skills: Array<TypeSkill> }) => {
   return (
     <StyledTechnologies>
-      <SectionTitle title="Technologies" />
+      <Container>
+        <SectionTitle title="Technologies" />
 
-      <ProgressContainer>
-        <FlexWrapper direction="column" align="center" gap="25px">
-          {props.skills.map((skill, index) => {
-            return (
-              <li key={index}>
-                <ProgressText>{skill.valueTitle}</ProgressText>
-                <progress max="100" value={skill.value}></progress>
-              </li>
-            );
-          })}
+        <ProgressContainer>
+          <FlexWrapper direction="column" align="center" gap="25px">
+            {props.skills.map((skill, index) => {
+              return (
+                <li key={index}>
+                  <ProgressText>{skill.valueTitle}</ProgressText>
+                  <progress max="100" value={skill.value}></progress>
+                </li>
+              );
+            })}
+          </FlexWrapper>
+        </ProgressContainer>
+
+        <AddTitleTechs>Additional technologies and skills</AddTitleTechs>
+
+        <FlexWrapper content="center">
+          <AccountsGroup svgGroup={techsSvgsGroup} />
         </FlexWrapper>
-      </ProgressContainer>
-
-      <AddTitleTechs>Additional technologies and skills</AddTitleTechs>
-
-      <FlexWrapper content="center">
-        <AccountsGroup svgGroup={techsSvgsGroup} />
-      </FlexWrapper>
+      </Container>
     </StyledTechnologies>
   );
 };
 
 const StyledTechnologies = styled.section`
-  margin: 0 auto;
-  width: 80%;
   margin-bottom: 170px;
 `;
 
@@ -75,11 +77,11 @@ const ProgressContainer = styled.ul`
     }
 
     &::-webkit-progress-value {
-      background: linear-gradient(90deg, #945dd6, #13adc7);
+      background: ${Theme.colors.gradientBg};
       border-radius: 83px;
     }
     &::-moz-progress-bar {
-      background: linear-gradient(90deg, #945dd6, #13adc7);
+      background: ${Theme.colors.gradientBg};
       border-radius: 83px;
     }
   }
@@ -88,14 +90,12 @@ const ProgressContainer = styled.ul`
 const ProgressText = styled.p`
   font-weight: 600;
   font-size: 24px;
-  color: #fff;
   margin-left: 25px;
 `;
 
 const AddTitleTechs = styled.h3`
   font-weight: 600;
   font-size: 44px;
-  color: #fff;
   display: flex;
   justify-content: center;
   margin-bottom: 70px;

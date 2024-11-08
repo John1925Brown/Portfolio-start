@@ -7,6 +7,8 @@ import project1Path from '../../../assets/images/project-1.jpg';
 import project2Path from '../../../assets/images/project-2.jpg';
 import project3Path from '../../../assets/images/project-3.jpg';
 import project4Path from '../../../assets/images/project-4.jpg';
+import { Theme } from '../../../styles/Theme';
+import { Container } from '../../../components/Container';
 
 export const Projects = () => {
   return (
@@ -26,11 +28,6 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  background: #161d2a;
-`;
-
-export const Container = styled.div`
-  width: 80%;
-  margin: 0 auto;
+  background: ${Theme.colors.secondaryBg};
   padding-bottom: 140px;
 `;

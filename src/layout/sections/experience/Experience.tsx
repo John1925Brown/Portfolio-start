@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
+import { Container } from '../../../components/Container';
+import { Theme } from '../../../styles/Theme';
 
 export const Experience = () => {
   return (
@@ -38,12 +40,7 @@ export const Experience = () => {
 
 const StyledExperience = styled.section`
   padding: 100px 0 140px 0;
-  background-color: #161d2a;
-`;
-
-const Container = styled.div`
-  width: 80%;
-  margin: 0 auto;
+  background-color: ${Theme.colors.secondaryBg};
 `;
 
 const TimeLine = styled.div`
@@ -58,12 +55,7 @@ const TimeLine = styled.div`
     content: '';
     width: 94%;
     height: 8px;
-    background: linear-gradient(
-      270deg,
-      #13adc7 0%,
-      #6978d1 66.67%,
-      #945dd6 100%
-    );
+    background: ${Theme.colors.gradientBg};
     border-radius: 83px;
     position: absolute;
     left: 3%;
@@ -74,7 +66,6 @@ const TimeLine = styled.div`
 const Year = styled.p`
   font-weight: 600;
   font-size: 26px;
-  color: #fff;
   position: relative;
 
   &::after {
@@ -92,9 +83,7 @@ const Year = styled.p`
 `;
 
 const Description = styled.p`
-  font-weight: 500;
   font-size: 18px;
   text-align: center;
-  color: #fff;
   max-width: 250px;
 `;

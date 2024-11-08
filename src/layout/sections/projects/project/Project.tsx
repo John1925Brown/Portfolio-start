@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { StyledLinkBtn } from '../../../../components/linkBtn/LinkBtn';
 import { Photo } from '../../../../components/Photo';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
-import { Theme } from '../../../../styles/Theme';
+import { theme } from '../../../../styles/theme';
 
 type ProjectPropsType = {
   src: string;
@@ -37,7 +37,7 @@ const StyledProject = styled.article`
   border-radius: 50px 0;
   max-width: 550px;
   max-height: 670px;
-  background: ${Theme.colors.primaryBg};
+  background: ${theme.colors.primaryBg};
   padding: 25px 25px 40px 25px;
 `;
 
@@ -58,7 +58,7 @@ const StyledTitle = styled.h3`
     bottom: -23px;
 
     left: -50%;
-    background: ${Theme.colors.gradientBg};
+    background: ${theme.colors.gradientBg};
   }
 `;
 

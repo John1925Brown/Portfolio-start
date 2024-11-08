@@ -3,7 +3,7 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
 import { Container } from '../../components/Container';
-import { Theme } from '../../styles/Theme';
+import { theme } from '../../styles/theme';
 
 type TypeSkill = {
   valueTitle: string;
@@ -30,7 +30,7 @@ const techsSvgsGroup = [
 
 export const Technologies = (props: { skills: Array<TypeSkill> }) => {
   return (
-    <StyledTechnologies>
+    <section>
       <Container>
         <SectionTitle title="Technologies" />
 
@@ -53,13 +53,9 @@ export const Technologies = (props: { skills: Array<TypeSkill> }) => {
           <AccountsGroup svgGroup={techsSvgsGroup} />
         </FlexWrapper>
       </Container>
-    </StyledTechnologies>
+    </section>
   );
 };
-
-const StyledTechnologies = styled.section`
-  margin-bottom: 170px;
-`;
 
 const ProgressContainer = styled.ul`
   width: 100%;
@@ -77,11 +73,11 @@ const ProgressContainer = styled.ul`
     }
 
     &::-webkit-progress-value {
-      background: ${Theme.colors.gradientBg};
+      background: ${theme.colors.gradientBg};
       border-radius: 83px;
     }
     &::-moz-progress-bar {
-      background: ${Theme.colors.gradientBg};
+      background: ${theme.colors.gradientBg};
       border-radius: 83px;
     }
   }

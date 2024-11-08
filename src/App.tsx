@@ -20,7 +20,7 @@ const mySkills = [
 function App() {
   return (
     <>
-      <Header />;
+      <Header />
       <Main />
       <Projects />
       <Technologies skills={mySkills} />

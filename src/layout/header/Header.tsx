@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Logo } from '../../components/logo/Logo';
 import { Menu } from '../../components/menu/Menu';
 import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
+import { Container } from '../../components/Container';
+import { FlexWrapper } from '../../components/FlexWrapper';
 
 const headerSvgsGroup = [
   {
@@ -24,19 +26,18 @@ const headerSvgsGroup = [
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
-      <Menu />
-      <AccountsGroup svgGroup={headerSvgsGroup} />
+      <Container>
+        <FlexWrapper align="center" content="space-between">
+          <Logo />
+          <Menu />
+          <AccountsGroup svgGroup={headerSvgsGroup} />
+        </FlexWrapper>
+      </Container>
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
   padding-top: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: 0 auto;
   margin-bottom: 150px;
 `;

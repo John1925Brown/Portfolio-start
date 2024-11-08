@@ -25,7 +25,6 @@ const StyledMenu = styled.nav`
     gap: 80px;
 
     & li {
-      font-weight: 500;
       font-size: 16px;
       list-style: none;
 

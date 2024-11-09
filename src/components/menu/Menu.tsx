@@ -1,16 +1,17 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/theme';
 export const Menu = () => {
   return (
     <StyledMenu>
       <ul>
         <li>
-          <a href="#">Projects</a>
+          <Link href="#">Projects</Link>
         </li>
         <li>
-          <a href="#">Technologies</a>
+          <Link href="#">Technologies</Link>
         </li>
         <li>
-          <a href="#">About me</a>
+          <Link href="#">About me</Link>
         </li>
       </ul>
     </StyledMenu>
@@ -19,23 +20,25 @@ export const Menu = () => {
 
 const StyledMenu = styled.nav`
   ul {
-    padding: 0;
-    margin: 0;
+
     display: flex;
     gap: 80px;
 
-    & li {
-      font-size: 16px;
-      list-style: none;
-
-      & a {
-        text-decoration: none;
-        color: #fff;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+    @media screen and (max-width: 1050px) {
+      gap: 40px;
     }
+  }
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+`;
+
+const Link = styled.a`
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    text-decoration: underline;
   }
 `;

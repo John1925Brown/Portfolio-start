@@ -4,6 +4,7 @@ import { Menu } from '../../components/menu/Menu';
 import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
+import { MobileMenu } from './mobileMenu/MobileMenu';
 
 const headerSvgsGroup = [
   {
@@ -29,6 +30,7 @@ export const Header = () => {
       <Container>
         <FlexWrapper align="center" content="space-between">
           <Logo />
+          <MobileMenu />
           <Menu />
           <AccountsGroup svgGroup={headerSvgsGroup} />
         </FlexWrapper>
@@ -40,4 +42,10 @@ export const Header = () => {
 const StyledHeader = styled.header`
   padding-top: 25px;
   margin-bottom: 150px;
+
+  nav + div {
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
+  }
 `;

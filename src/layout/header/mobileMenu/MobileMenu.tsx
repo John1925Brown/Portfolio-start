@@ -3,7 +3,7 @@ import { theme } from '../../../styles/Theme';
 
 export const MobileMenu = () => {
   return (
-    <StyledMobileMenu>
+    <div>
       <BurgerBtn isOpen={false}>
         <span></span>
       </BurgerBtn>
@@ -11,43 +11,25 @@ export const MobileMenu = () => {
       <MobileMenuPopup isOpen={false}>
         <ul>
           <li>
-            <Link href="#">Projects</Link>
+            <a href="#">Projects</a>
           </li>
           <li>
-            <Link href="#">Technologies</Link>
+            <a href="#">Technologies</a>
           </li>
           <li>
-            <Link href="#">About me</Link>
+            <a href="#">About me</a>
           </li>
         </ul>
       </MobileMenuPopup>
-    </StyledMobileMenu>
+    </div>
   );
 };
-
-const StyledMobileMenu = styled.nav``;
-
-const Link = styled.a`
-  text-decoration: none;
-  color: #fff;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
 
 const BurgerBtn = styled.button<{ isOpen: boolean }>`
   position: fixed;
   top: 47px;
   right: 80px;
-  display: none;
-  /* width: 36px;
-  height: 20px; */
   z-index: 11;
-
-  @media ${theme.media.tablet} {
-    display: block;
-  }
 
   ${(props) =>
     props.isOpen &&

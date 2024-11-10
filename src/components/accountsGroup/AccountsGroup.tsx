@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
+import React from 'react';
+import { S } from './AccountsGroup_Styles';
 
 type TypeImage = {
   iconId: string;
@@ -7,9 +8,11 @@ type TypeImage = {
   height: number;
 };
 
-export const AccountsGroup = (props: { svgGroup: Array<TypeImage> }) => {
+export const AccountsGroup: React.FC<{ svgGroup: Array<TypeImage> }> = (props: {
+  svgGroup: Array<TypeImage>;
+}) => {
   return (
-    <StyledAccountsGroup>
+    <S.AccountsGroup>
       {props.svgGroup.map((image, index) => {
         return (
           <a href="#" key={index}>
@@ -21,16 +24,6 @@ export const AccountsGroup = (props: { svgGroup: Array<TypeImage> }) => {
           </a>
         );
       })}
-    </StyledAccountsGroup>
+    </S.AccountsGroup>
   );
 };
-
-// Поменять гэп!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-const StyledAccountsGroup = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 50px;
-`;

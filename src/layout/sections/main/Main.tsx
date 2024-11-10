@@ -1,26 +1,25 @@
-import styled from 'styled-components';
 import photoUrl from '../../../assets/images/Hero.webp';
 import { StyledLinkBtn } from '../../../components/linkBtn/LinkBtn';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Photo } from '../../../components/Photo';
 import { Container } from '../../../components/Container';
-import { font } from '../../../styles/Common';
-import { theme } from '../../../styles/Theme';
+import React from 'react';
+import { S } from './Main.Styles';
 
-export const Main = () => {
+export const Main: React.FC = () => {
   return (
-    <StyledMain>
+    <S.Main>
       <Container>
         <FlexWrapper content="space-between" gap="20px">
           <div>
-            <Title>
+            <S.Title>
               Yarasheuski Dzmitry <br />
               Frontend developer
-            </Title>
-            <Description>
+            </S.Title>
+            <S.Description>
               Frontend developer focused on creating modern, interactive web
               interfaces with clean code
-            </Description>
+            </S.Description>
             <StyledLinkBtn width="240px"> Let’s Begin</StyledLinkBtn>
           </div>
           <Photo
@@ -35,42 +34,6 @@ export const Main = () => {
           />
         </FlexWrapper>
       </Container>
-    </StyledMain>
+    </S.Main>
   );
 };
-
-const StyledMain = styled.section`
-  div > div {
-    @media ${theme.media.tablet} {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  div > ${FlexWrapper} {
-    div {
-      @media ${theme.media.tablet} {
-        display: flex;
-        align-items: center;
-        max-width: 380px;
-      }
-    }
-  }
-`;
-
-const Title = styled.h1`
-  ${font({ weight: 600, Fmax: 54, Fmin: 26 })}
-  max-width: 670px;
-  margin-bottom: 15px;
-  padding-top: 40px;
-`;
-
-const Description = styled.p`
-  ${font({ color: '#bcbcbc', Fmax: 18, Fmin: 12 })}
-  margin-bottom: 60px;
-  max-width: 480px;
-  @media ${theme.media.tablet} {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-`;

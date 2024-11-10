@@ -1,7 +1,8 @@
-import styled from 'styled-components';
 import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { Container } from '../../components/Container';
+import React from 'react';
+import { S } from './Footer_Styles';
 
 const techsSvgsGroup = [
   {
@@ -21,34 +22,24 @@ const techsSvgsGroup = [
   },
 ];
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
-    <StyledFooter>
+    <S.StyledFooter>
       <Container>
         <FlexWrapper align="center" content="space-between">
-          <ContactsText>
+          <S.ContactsText>
             Call me:
             <br />
             452-622-803
-          </ContactsText>
-          <ContactsText>
+          </S.ContactsText>
+          <S.ContactsText>
             Email:
             <br />
             materik08082020@gmail.com
-          </ContactsText>
+          </S.ContactsText>
           <AccountsGroup svgGroup={techsSvgsGroup} />
         </FlexWrapper>
       </Container>
-    </StyledFooter>
+    </S.StyledFooter>
   );
 };
-
-const StyledFooter = styled.footer`
-  padding-top: 42px;
-  padding-bottom: 42px;
-`;
-
-const ContactsText = styled.p`
-  font-weight: 600;
-  font-size: 22px;
-`;

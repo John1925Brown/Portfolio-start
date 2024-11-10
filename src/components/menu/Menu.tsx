@@ -1,44 +1,20 @@
-import styled from 'styled-components';
-import { theme } from '../../styles/Theme';
-export const Menu = () => {
+import React from 'react';
+import { S } from './Menu_Styles';
+
+export const Menu: React.FC = () => {
   return (
-    <StyledMenu>
+    <S.Menu>
       <ul>
         <li>
-          <Link href="#">Projects</Link>
+          <a href="#">Projects</a>
         </li>
         <li>
-          <Link href="#">Technologies</Link>
+          <a href="#">Technologies</a>
         </li>
         <li>
-          <Link href="#">About me</Link>
+          <a href="#">About me</a>
         </li>
       </ul>
-    </StyledMenu>
+    </S.Menu>
   );
 };
-
-const StyledMenu = styled.nav`
-  ul {
-
-    display: flex;
-    gap: 80px;
-
-    @media screen and (max-width: 1050px) {
-      gap: 40px;
-    }
-  }
-
-  @media ${theme.media.tablet} {
-    display: none;
-  }
-`;
-
-const Link = styled.a`
-  text-decoration: none;
-  color: #fff;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;

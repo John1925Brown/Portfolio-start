@@ -17,7 +17,7 @@ export const Projects = () => {
       <Container>
         <SectionTitle title="Projects"></SectionTitle>
 
-        <FlexWrapper wrap="wrap" content="space-between" gap=" 60px 0">
+        <FlexWrapper wrap="wrap" content="space-between" gap="60px 40px">
           <Project src={project1Path} titleValue="PROJECT 1" />
           <Project src={project2Path} titleValue="PROJECT 2" />
           <Project src={project3Path} titleValue="PROJECT 3" />
@@ -30,4 +30,16 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
   background: ${theme.colors.secondaryBg};
+
+  @media ${theme.media.tablet} {
+    div {
+      justify-content: center;
+    }
+  }
+
+  @media ${theme.media.mobile} {
+    div {
+      gap: 20px;
+    }
+  }
 `;

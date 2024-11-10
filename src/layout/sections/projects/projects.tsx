@@ -17,8 +17,6 @@ export const Projects = () => {
       <Container>
         <SectionTitle title="Projects"></SectionTitle>
 
-        {/* Переделать на грид!!! */}
-
         <FlexWrapper wrap="wrap" content="space-between" gap=" 60px 0">
           <Project src={project1Path} titleValue="PROJECT 1" />
           <Project src={project2Path} titleValue="PROJECT 2" />

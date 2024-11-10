@@ -4,6 +4,7 @@ import { StyledLinkBtn } from '../../../../components/linkBtn/LinkBtn';
 import { Photo } from '../../../../components/Photo';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
 import { theme } from '../../../../styles/Theme';
+import { font } from '../../../../styles/Common';
 
 type ProjectPropsType = {
   src: string;
@@ -42,8 +43,7 @@ const StyledProject = styled.article`
 `;
 
 const StyledTitle = styled.h3`
-  font-weight: 600;
-  font-size: 30px;
+  ${font({ weight: 600, Fmin: 20, Fmax: 30 })}
   line-height: 0.885;
   margin-bottom: 65px;
   position: relative;
@@ -63,7 +63,6 @@ const StyledTitle = styled.h3`
 `;
 
 const StyledDescription = styled.p`
-  font-size: 18px;
-  color: #fff;
+  ${font({ Fmin: 14, Fmax: 18, color: theme.colors.font })}
   margin-bottom: 50px;
 `;

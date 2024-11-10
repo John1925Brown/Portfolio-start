@@ -4,8 +4,8 @@ import { Header } from './layout/header/Header';
 import { Experience } from './layout/sections/experience/Experience';
 import { Contacts } from './layout/sections/contacts/Contacts';
 import { Main } from './layout/sections/main/Main';
-import { Projects } from './layout/sections/projects/Projects';
 import { Technologies } from './layout/technologies/Technologies';
+import { Projects } from './layout/sections/projects/Projects';
 
 // Куда-то убрать массив!!
 

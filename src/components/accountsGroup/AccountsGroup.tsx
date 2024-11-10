@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
+import { theme } from '../../styles/Theme';
 
 type TypeImage = {
   iconId: string;
@@ -33,4 +34,12 @@ const StyledAccountsGroup = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 50px;
+
+  @media screen and (max-width: 1050px) {
+    gap: 30px;
+  }
+
+  /* @media ${theme.media.tablet} {
+    gap: 15px;
+  } */
 `;

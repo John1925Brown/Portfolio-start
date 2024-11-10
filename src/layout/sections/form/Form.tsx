@@ -3,7 +3,7 @@ import { Container } from '../../../components/Container';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Button } from '../../../components/Button';
-import { theme } from '../../../styles/theme';
+import { theme } from '../../../styles/Theme';
 
 export const Contacts = () => {
   return (

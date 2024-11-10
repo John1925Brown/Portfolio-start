@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from './theme';
+import { theme } from './Theme';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -13,6 +13,14 @@ body {
 
 section{
   padding-bottom: 140px;
+  
+  @media ${theme.media.tablet}{
+    padding-bottom: 100px;
+  }
+
+  @media ${theme.media.mobile}{
+    padding-bottom: 40px;
+  }
 }
 
 :root {

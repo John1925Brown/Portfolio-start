@@ -4,6 +4,7 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Button } from '../../../components/Button';
 import { theme } from '../../../styles/Theme';
+import { StyledLinkBtn } from '../../../components/linkBtn/LinkBtn';
 
 export const Contacts = () => {
   return (

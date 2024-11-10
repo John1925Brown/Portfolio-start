@@ -3,6 +3,7 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Container } from '../../../components/Container';
 import { theme } from '../../../styles/Theme';
+import { font } from '../../../styles/Common';
 
 export const Experience = () => {
   return (
@@ -40,6 +41,12 @@ export const Experience = () => {
 
 const StyledExperience = styled.section`
   background-color: ${theme.colors.secondaryBg};
+
+  div > ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      justify-content: center;
+    }
+  }
 `;
 
 const TimeLine = styled.div`
@@ -52,19 +59,31 @@ const TimeLine = styled.div`
 
   &::after {
     content: '';
-    width: 94%;
+    width: 92%;
     height: 8px;
     background: ${theme.colors.gradientBg};
     border-radius: 83px;
     position: absolute;
     left: 3%;
-    bottom: -28px;
+    bottom: -27px;
+
+    @media ${theme.media.tablet} {
+      width: 90%;
+      height: 6px;
+      left: 5%;
+      bottom: -25px;
+    }
+
+    @media ${theme.media.mobile} {
+      width: 88%;
+      height: 4px;
+      bottom: -27px;
+    }
   }
 `;
 
 const Year = styled.p`
-  font-weight: 600;
-  font-size: 26px;
+  ${font({ weight: 600, Fmax: 26, Fmin: 16 })}
   position: relative;
 
   &::after {
@@ -78,11 +97,26 @@ const Year = styled.p`
     transform: translateX(-50%);
     bottom: -35px;
     z-index: 100;
+
+    @media ${theme.media.mobile} {
+      width: 20px;
+      height: 20px;
+    }
   }
 `;
 
 const Description = styled.p`
-  font-size: 18px;
+  ${font({ Fmax: 18, Fmin: 14 })}
   text-align: center;
   max-width: 250px;
+
+  /* При нажатии на белый кружок, будет расскрываться опеределенный элемент Description */
+
+  @media ${theme.media.tablet} {
+    display: none;
+    &:first-of-type {
+      display: block;
+      max-width: 200px;
+    }
+  }
 `;

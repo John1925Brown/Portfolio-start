@@ -32,13 +32,13 @@ const StyledProjects = styled.section`
   background: ${theme.colors.secondaryBg};
 
   @media ${theme.media.tablet} {
-    div {
+    ${FlexWrapper} {
       justify-content: center;
     }
   }
 
   @media ${theme.media.mobile} {
-    div {
+    ${FlexWrapper} {
       gap: 20px;
     }
   }

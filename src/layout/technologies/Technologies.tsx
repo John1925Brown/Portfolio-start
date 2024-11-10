@@ -4,6 +4,7 @@ import { FlexWrapper } from '../../components/FlexWrapper';
 import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
 import { Container } from '../../components/Container';
 import { theme } from '../../styles/Theme';
+import { font } from '../../styles/Common';
 
 type TypeSkill = {
   valueTitle: string;
@@ -30,7 +31,7 @@ const techsSvgsGroup = [
 
 export const Technologies = (props: { skills: Array<TypeSkill> }) => {
   return (
-    <section>
+    <StyledTechnologies>
       <Container>
         <SectionTitle title="Technologies" />
 
@@ -53,16 +54,19 @@ export const Technologies = (props: { skills: Array<TypeSkill> }) => {
           <AccountsGroup svgGroup={techsSvgsGroup} />
         </FlexWrapper>
       </Container>
-    </section>
+    </StyledTechnologies>
   );
 };
+
+const StyledTechnologies = styled.section``;
 
 const ProgressContainer = styled.ul`
   width: 100%;
   margin-bottom: 120px;
 
   & progress {
-    width: 670px;
+    margin: 0 auto;
+    width: calc(100vw * 0.625);
     height: 15px;
     -webkit-appearance: none;
     appearance: none;
@@ -81,18 +85,28 @@ const ProgressContainer = styled.ul`
       border-radius: 83px;
     }
   }
+
+  @media ${theme.media.tablet} {
+    margin-bottom: 100px;
+  }
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 60px;
+  }
 `;
 
 const ProgressText = styled.p`
-  font-weight: 600;
-  font-size: 24px;
+  ${font({ weight: 600, Fmax: 24, Fmin: 18 })};
   margin-left: 25px;
 `;
 
 const AddTitleTechs = styled.h3`
-  font-weight: 600;
-  font-size: 44px;
+  ${font({ weight: 600, Fmax: 44, Fmin: 25, color: theme.colors.font })}
   display: flex;
   justify-content: center;
   margin-bottom: 70px;
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 30px;
+  }
 `;

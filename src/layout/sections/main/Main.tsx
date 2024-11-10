@@ -47,11 +47,13 @@ const StyledMain = styled.section`
     }
   }
 
-  div > div > div {
-    @media ${theme.media.tablet} {
-      display: flex;
-      align-items: center;
-      max-width: 380px;
+  div > ${FlexWrapper} {
+    div {
+      @media ${theme.media.tablet} {
+        display: flex;
+        align-items: center;
+        max-width: 380px;
+      }
     }
   }
 `;

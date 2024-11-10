@@ -3,7 +3,7 @@ import { SectionTitle } from '../../components/SectionTitle';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
 import { Container } from '../../components/Container';
-import { theme } from '../../styles/theme';
+import { theme } from '../../styles/Theme';
 
 type TypeSkill = {
   valueTitle: string;

@@ -5,6 +5,7 @@ import { AccountsGroup } from '../../components/accountsGroup/AccountsGroup';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { MobileMenu } from './mobileMenu/MobileMenu';
+import { theme } from '../../styles/Theme';
 
 const headerSvgsGroup = [
   {
@@ -42,6 +43,10 @@ export const Header = () => {
 const StyledHeader = styled.header`
   padding-top: 25px;
   margin-bottom: 150px;
+
+  @media ${theme.media.tablet} {
+    margin-bottom: 0;
+  }
 
   nav + div {
     @media screen and (max-width: 1050px) {

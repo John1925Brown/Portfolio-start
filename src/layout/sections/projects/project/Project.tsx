@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { StyledLinkBtn } from '../../../../components/linkBtn/LinkBtn';
 import { Photo } from '../../../../components/Photo';
 import { FlexWrapper } from '../../../../components/FlexWrapper';
-import { theme } from '../../../../styles/theme';
+import { theme } from '../../../../styles/Theme';
 
 type ProjectPropsType = {
   src: string;

@@ -8,7 +8,7 @@ import project2Path from '../../../assets/images/project-2.jpg';
 import project3Path from '../../../assets/images/project-3.jpg';
 import project4Path from '../../../assets/images/project-4.jpg';
 
-import { theme } from '../../../styles/theme';
+import { theme } from '../../../styles/Theme';
 import { Container } from '../../../components/Container';
 
 export const Projects = () => {

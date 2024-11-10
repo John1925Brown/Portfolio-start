@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Container } from '../../../components/Container';
-import { theme } from '../../../styles/theme';
+import { theme } from '../../../styles/Theme';
 
 export const Experience = () => {
   return (

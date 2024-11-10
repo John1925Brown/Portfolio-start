@@ -4,6 +4,7 @@ import { Container } from '../../components/Container';
 import React from 'react';
 import { S } from './Footer_Styles';
 
+
 const techsSvgsGroup = [
   {
     width: 35,
@@ -43,3 +44,4 @@ export const Footer: React.FC = () => {
     </S.StyledFooter>
   );
 };
+

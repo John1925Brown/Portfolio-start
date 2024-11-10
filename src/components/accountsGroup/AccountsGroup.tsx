@@ -1,6 +1,8 @@
 import { Icon } from '../icon/Icon';
+
 import React from 'react';
 import { S } from './AccountsGroup_Styles';
+
 
 type TypeImage = {
   iconId: string;
@@ -27,3 +29,4 @@ export const AccountsGroup: React.FC<{ svgGroup: Array<TypeImage> }> = (props: {
     </S.AccountsGroup>
   );
 };
+

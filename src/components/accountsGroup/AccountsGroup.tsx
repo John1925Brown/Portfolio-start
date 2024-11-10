@@ -30,5 +30,7 @@ export const AccountsGroup = (props: { svgGroup: Array<TypeImage> }) => {
 const StyledAccountsGroup = styled.div`
   display: flex;
   align-items: center;
-  gap: 25px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
 `;

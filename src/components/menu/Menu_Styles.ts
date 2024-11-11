@@ -9,6 +9,12 @@ const Menu = styled.nav`
       gap: 40px;
     }
   }
+
+  div > div {
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
+  }
 `;
 
 export const S = {

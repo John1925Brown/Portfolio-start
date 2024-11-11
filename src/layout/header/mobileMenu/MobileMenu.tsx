@@ -1,14 +1,28 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../../styles/Theme';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { Logo } from '../../../components/logo/Logo';
+import { useState } from 'react';
 
 export const MobileMenu = () => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const burgerBtnClick = () => {
+    setMenuIsOpen(!menuIsOpen);
+  };
+
   return (
-    <div>
-      <BurgerBtn isOpen={false}>
+    <FlexWrapper>
+      <Logo />
+      <BurgerBtn isOpen={menuIsOpen} onClick={burgerBtnClick}>
         <span></span>
       </BurgerBtn>
 
-      <MobileMenuPopup isOpen={false}>
+      <MobileMenuPopup
+        isOpen={menuIsOpen}
+        onClick={() => {
+          setMenuIsOpen(false);
+        }}
+      >
         <ul>
           <li>
             <a href="#">Projects</a>
@@ -21,14 +35,16 @@ export const MobileMenu = () => {
           </li>
         </ul>
       </MobileMenuPopup>
-    </div>
+    </FlexWrapper>
   );
 };
 
 const BurgerBtn = styled.button<{ isOpen: boolean }>`
+  width: 36px;
+  height: 25px;
   position: fixed;
-  top: 47px;
-  right: 80px;
+  top: 35px;
+  right: 60px;
   z-index: 11;
 
   ${(props) =>

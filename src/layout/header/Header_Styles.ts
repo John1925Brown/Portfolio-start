@@ -8,12 +8,6 @@ const Header = styled.header`
   @media ${theme.media.tablet} {
     margin-bottom: 0;
   }
-
-  nav + div {
-    @media screen and (max-width: 1050px) {
-      display: none;
-    }
-  }
 `;
 
 export const S = {

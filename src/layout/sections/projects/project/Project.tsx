@@ -8,6 +8,8 @@ type ProjectPropsType = {
   src: string;
   titleValue: string;
 };
+
+
 export const Project: React.FC<ProjectPropsType> = (
   props: ProjectPropsType
 ) => {

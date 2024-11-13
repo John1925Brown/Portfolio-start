@@ -6,9 +6,9 @@ import { S } from './Project_Styles';
 
 type ProjectPropsType = {
   src: string;
-  titleValue: string;
+  title: string;
+  description: string;
 };
-
 
 export const Project: React.FC<ProjectPropsType> = (
   props: ProjectPropsType
@@ -24,14 +24,13 @@ export const Project: React.FC<ProjectPropsType> = (
           radius="24px 8px 8px 8px"
           marginB="40px"
           src={props.src}
-          alt="project 1"
+          alt={props.title}
         />
-        <S.Title>{props.titleValue}</S.Title>
-        <S.Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </S.Description>
-        <StyledLinkBtn width="200px">Look It Up</StyledLinkBtn>
+        <S.Title>{props.title}</S.Title>
+        <S.Description>{props.description}</S.Description>
+        <StyledLinkBtn as="button" width="200px">
+          Look It Up
+        </StyledLinkBtn>
       </FlexWrapper>
     </S.Project>
   );

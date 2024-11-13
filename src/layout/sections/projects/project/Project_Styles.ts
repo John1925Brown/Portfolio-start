@@ -1,15 +1,24 @@
-import styled from "styled-components";
-import { theme } from "../../../../styles/Theme";
-import { font } from "../../../../styles/Common";
+import styled from 'styled-components';
+import { theme } from '../../../../styles/Theme';
+import { font } from '../../../../styles/Common';
 
 const Project = styled.article`
   border: 1px solid #a39d9d;
   border-radius: 50px 0;
   max-width: 550px;
-  max-height: 670px;
   flex: 1 1 40%;
   background: ${theme.colors.primaryBg};
   padding: 25px 25px 40px 25px;
+
+  display: flex;
+
+  div {
+    flex-direction: column;
+  }
+
+  div > button {
+    margin-top: auto;
+  }
 
   @media ${theme.media.tablet} {
     flex: none;

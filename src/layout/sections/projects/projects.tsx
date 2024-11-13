@@ -8,12 +8,26 @@ import project4Path from '../../../assets/images/project-4.jpg';
 import { Container } from '../../../components/Container';
 import React from 'react';
 import { S } from './Projects_Styles';
+import { Tabs } from './tabs/Tabs';
+
+const tabtsData = ['All', 'Landing', 'React', 'Spa'];
+
+// const projectsData = [
+//   {
+//     src: { project1Path },
+//     title: 'PROJECT 1',
+//     description:
+//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+//   },
+// ];
 
 export const Projects: React.FC = () => {
   return (
     <S.Projects>
       <Container>
         <SectionTitle title="Projects"></SectionTitle>
+
+        <Tabs tabsItems={tabtsData} />
 
         <FlexWrapper wrap="wrap" content="space-between" gap="60px 40px">
           <Project src={project1Path} titleValue="PROJECT 1" />

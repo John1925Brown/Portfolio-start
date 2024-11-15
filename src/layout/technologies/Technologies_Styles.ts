@@ -2,6 +2,13 @@ import styled from 'styled-components';
 import { theme } from '../../styles/Theme';
 import { font } from '../../styles/Common';
 
+const Technologies = styled.section`
+  div > div {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+`;
+
 const ProgressContainer = styled.ul`
   width: 100%;
   margin-bottom: 120px;
@@ -57,4 +64,5 @@ export const S = {
   ProgressContainer,
   AddTitleTechs,
   ProgressText,
+  Technologies,
 };

@@ -1,0 +1,30 @@
+.alice-carousel__stage-item div {
+  margin: 0 auto;
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.alice-carousel__stage-item div svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alice-carousel__stage-item div svg use {
+  transform: translate(50px, 50px);
+}
+
+.alice-carousel__dots-item:not(.__custom) {
+  background-color: #6e7ebc;
+}
+
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: white;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  display: none;
+}

@@ -27,6 +27,10 @@ const Title = styled.h1`
   max-width: 670px;
   margin-bottom: 15px;
   padding-top: 40px;
+
+  p {
+    display: none;
+  }
 `;
 
 const Description = styled.p`

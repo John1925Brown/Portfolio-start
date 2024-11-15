@@ -4,6 +4,7 @@ import { font } from '../../../styles/Common';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 
 const Main = styled.section`
+  position: relative;
   div > div {
     @media ${theme.media.tablet} {
       flex-direction: column;

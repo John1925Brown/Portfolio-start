@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Logo } from '../../components/logo/Logo';
 import { Menu } from '../../components/menu/Menu';
 import { Container } from '../../components/Container';
-import { FlexWrapper } from '../../components/FlexWrapper';
 import { MobileMenu } from './mobileMenu/MobileMenu';
 import { S } from './Header_Styles';
 

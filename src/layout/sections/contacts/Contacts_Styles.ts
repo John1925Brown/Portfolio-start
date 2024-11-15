@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { theme } from '../../../styles/Theme';
 
 const Form = styled.form`
+  position: relative;
   max-width: 540px;
   margin: 0 auto;
 

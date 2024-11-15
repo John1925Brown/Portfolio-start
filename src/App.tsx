@@ -6,6 +6,7 @@ import { Contacts } from './layout/sections/contacts/Contacts';
 import { Main } from './layout/sections/main/Main';
 import { Technologies } from './layout/technologies/Technologies';
 import { Projects } from './layout/sections/projects/Projects';
+import { Particle } from './components/particle/Particle';
 
 // Куда-то убрать массив!!
 
@@ -21,6 +22,7 @@ const mySkills = [
 function App() {
   return (
     <>
+      <Particle />
       <Header />
       <Main />
       <Projects />

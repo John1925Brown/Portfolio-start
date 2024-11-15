@@ -5,6 +5,7 @@ import { Photo } from '../../../components/Photo';
 import { Container } from '../../../components/Container';
 import React from 'react';
 import { S } from './Main.Styles';
+import Typewriter from 'typewriter-effect';
 
 export const Main: React.FC = () => {
   return (
@@ -13,9 +14,18 @@ export const Main: React.FC = () => {
         <FlexWrapper content="space-between" gap="20px">
           <div>
             <S.Title>
-              Yarasheuski Dzmitry <br />
-              Frontend developer
+              <p> Frontend developer</p>
+              <span>Yarasheuski Dzmitry </span>
+              <br />
+              <Typewriter
+                options={{
+                  strings: ['Frontend developer'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </S.Title>
+
             <S.Description>
               Frontend developer focused on creating modern, interactive web
               interfaces with clean code

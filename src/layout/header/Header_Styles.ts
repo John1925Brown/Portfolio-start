@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { theme } from '../../styles/Theme';
 
 const Header = styled.header`
+  position: relative;
   padding-top: 25px;
   margin-bottom: 150px;
 

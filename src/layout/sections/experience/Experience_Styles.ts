@@ -4,6 +4,7 @@ import { font } from '../../../styles/Common';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 
 const Experience = styled.section`
+  position: relative;
   background-color: ${theme.colors.secondaryBg};
 
   div > ${FlexWrapper} {

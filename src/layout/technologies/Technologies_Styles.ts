@@ -3,6 +3,7 @@ import { theme } from '../../styles/Theme';
 import { font } from '../../styles/Common';
 
 const Technologies = styled.section`
+  position: relative;
   div > div {
     margin: 0 auto;
     max-width: 500px;

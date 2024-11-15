@@ -3,6 +3,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { theme } from '../../../styles/Theme';
 
 const Projects = styled.section`
+  position: relative;
   background: ${theme.colors.secondaryBg};
 
   @media ${theme.media.tablet} {

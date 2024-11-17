@@ -15,7 +15,7 @@ export const Technologies: React.FC<{ skills: Array<TypeSkill> }> = ({
   skills,
 }) => {
   return (
-    <S.Technologies>
+    <S.Technologies id={'technologies'}>
       <Container>
         <SectionTitle title="Technologies" />
 

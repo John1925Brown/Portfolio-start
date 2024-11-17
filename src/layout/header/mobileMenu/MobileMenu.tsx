@@ -3,6 +3,7 @@ import { theme } from '../../../styles/Theme';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Logo } from '../../../components/logo/Logo';
 import { useState } from 'react';
+import { headerItems } from '../Header';
 
 export const MobileMenu = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -24,15 +25,13 @@ export const MobileMenu = () => {
         }}
       >
         <ul>
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Technologies</a>
-          </li>
-          <li>
-            <a href="#">About me</a>
-          </li>
+          {headerItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <a href={`#${item.href}`}>{item.title}</a>
+              </li>
+            );
+          })}
         </ul>
       </MobileMenuPopup>
     </FlexWrapper>

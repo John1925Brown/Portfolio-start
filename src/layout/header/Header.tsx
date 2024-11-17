@@ -4,6 +4,12 @@ import { Container } from '../../components/Container';
 import { MobileMenu } from './mobileMenu/MobileMenu';
 import { S } from './Header_Styles';
 
+export const headerItems = [
+  { title: 'Projects', href: 'projects' },
+  { title: 'Technologies', href: 'technologies' },
+  { title: 'Contact', href: 'contact' },
+];
+
 export const Header: React.FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 768;

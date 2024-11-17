@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 const Menu = styled.nav`
@@ -17,6 +18,9 @@ const Menu = styled.nav`
   }
 `;
 
+const NavLink = styled(Link)``;
+
 export const S = {
   Menu,
+  NavLink,
 };

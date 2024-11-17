@@ -7,6 +7,7 @@ import { Main } from './layout/sections/main/Main';
 import { Technologies } from './layout/technologies/Technologies';
 import { Projects } from './layout/sections/projects/Projects';
 import { Particle } from './components/particle/Particle';
+import { GoTopBtn } from './components/goTopBtn/GoTopBtn';
 
 // Куда-то убрать массив!!
 
@@ -30,6 +31,7 @@ function App() {
       <Experience />
       <Contacts />
       <Footer />
+      <GoTopBtn />
     </>
   );
 }

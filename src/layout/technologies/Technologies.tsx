@@ -5,6 +5,7 @@ import React from 'react';
 import { S } from './Technologies_Styles';
 import { Carousel } from './Slider/Slider';
 import '../../styles/slider.css';
+import { Fade } from 'react-awesome-reveal';
 
 type TypeSkill = {
   valueTitle: string;
@@ -23,10 +24,12 @@ export const Technologies: React.FC<{ skills: Array<TypeSkill> }> = ({
           <FlexWrapper direction="column" align="center" gap="25px">
             {skills.map((skill, index) => {
               return (
-                <li key={index}>
-                  <S.ProgressText>{skill.valueTitle}</S.ProgressText>
-                  <progress max="100" value={skill.value}></progress>
-                </li>
+                <Fade cascade={true} damping={0.5}>
+                  <li key={index}>
+                    <S.ProgressText>{skill.valueTitle}</S.ProgressText>
+                    <progress max="100" value={skill.value}></progress>
+                  </li>
+                </Fade>
               );
             })}
           </FlexWrapper>

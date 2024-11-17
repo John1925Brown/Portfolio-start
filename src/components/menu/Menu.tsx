@@ -3,6 +3,7 @@ import { S } from './Menu_Styles';
 import { AccountsGroup } from '../accountsGroup/AccountsGroup';
 import { Logo } from '../logo/Logo';
 import { FlexWrapper } from '../FlexWrapper';
+import { headerItems } from '../../layout/header/Header';
 
 const headerSvgsGroup = [
   {
@@ -28,18 +29,20 @@ export const Menu: React.FC = () => {
       <FlexWrapper align="center" content="space-between">
         <Logo />
         <ul>
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Technologies</a>
-          </li>
-          <li>
-            <a href="#">About me</a>
-          </li>
+          {headerItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <S.NavLink to={item.href} smooth={true}>
+                  {item.title}
+                </S.NavLink>
+              </li>
+            );
+          })}
         </ul>
         <AccountsGroup svgGroup={headerSvgsGroup} />
       </FlexWrapper>
     </S.Menu>
   );
 };
+
+// Сделать активные ссылки. Прикрепить хедер

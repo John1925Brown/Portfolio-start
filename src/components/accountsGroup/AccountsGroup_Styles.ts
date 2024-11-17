@@ -14,6 +14,15 @@ const AccountsGroup = styled.div`
   @media ${theme.media.tablet} {
     gap: 15px;
   }
+
+  svg {
+    margin-bottom: 0;
+    transition: 0.2s;
+
+    &:hover {
+      margin-bottom: 5px;
+    }
+  }
 `;
 
 export const S = {

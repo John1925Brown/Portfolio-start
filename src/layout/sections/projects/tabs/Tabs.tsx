@@ -1,6 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { font } from '../../../../styles/Common';
+import { S } from './Tabs_Styles';
 
 type TypeTabs = {
   tabsItems: Array<{
@@ -13,59 +12,21 @@ type TypeTabs = {
 
 export const Tabs: React.FC<TypeTabs> = (props) => {
   return (
-    <TabsList>
+    <S.TabsList>
       {props.tabsItems.map((tab, index) => {
         return (
           <li key={index}>
-            <Btn
+            <S.Btn
               active={props.currentTabsStatus === tab.status}
               onClick={() => {
                 props.changeTabsStatus(tab.status);
               }}
             >
               {tab.title}
-            </Btn>
+            </S.Btn>
           </li>
         );
       })}
-    </TabsList>
+    </S.TabsList>
   );
 };
-
-const TabsList = styled.ul`
-  display: flex;
-  gap: 40px;
-  margin-bottom: 50px;
-`;
-
-const Btn = styled.button<{ active: boolean }>`
-  ${font({ Fmax: 22, Fmin: 16, weight: 600 })}
-  position: relative;
-
-  ${(props) => {
-    return (
-      props.active &&
-      css`
-        &::after {
-          content: '';
-          height: 4px;
-          width: 100%;
-          position: absolute;
-          background-color: #fff;
-          bottom: -3px;
-          left: 0;
-        }
-      `
-    );
-  }}
-
-  &:hover::after {
-    content: '';
-    height: 4px;
-    width: 100%;
-    position: absolute;
-    background-color: #fff;
-    bottom: -3px;
-    left: 0;
-  }
-`;

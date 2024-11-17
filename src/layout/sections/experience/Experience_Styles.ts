@@ -24,13 +24,17 @@ const TimeLine = styled.div`
 
   &::after {
     content: '';
-    width: 92%;
+    width: 95%;
     height: 8px;
     background: ${theme.colors.gradientBg};
     border-radius: 83px;
     position: absolute;
     left: 3%;
     bottom: -27px;
+
+    @media screen and (max-width: 1200px) {
+      width: 93%;
+    }
 
     @media ${theme.media.tablet} {
       width: 90%;

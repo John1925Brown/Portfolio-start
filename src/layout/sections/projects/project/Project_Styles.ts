@@ -6,14 +6,12 @@ const Project = styled.article`
   border: 1px solid #a39d9d;
   border-radius: 50px 0;
   max-width: 550px;
-  flex: 1 1 40%;
   background: ${theme.colors.primaryBg};
   padding: 25px 25px 40px 25px;
-
-  display: flex;
+  height: 100%;
 
   div {
-    flex-direction: column;
+    height: 100%;
   }
 
   div > button {

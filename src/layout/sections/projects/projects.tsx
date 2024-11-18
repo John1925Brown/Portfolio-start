@@ -9,6 +9,7 @@ import { Container } from '../../../components/Container';
 import React, { useState } from 'react';
 import { S } from './Projects_Styles';
 import { Tabs } from './tabs/Tabs';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const tabsData: Array<{
   status: 'all' | 'landing' | 'react' | 'spa';
@@ -107,18 +108,28 @@ export const Projects: React.FC = () => {
           currentTabsStatus={currentTabsStatus}
         />
 
-        <FlexWrapper wrap="wrap" content="space-between" gap="60px 40px">
-          {filteredProjects.map((tab, index) => {
-            return (
-              <Project
-                key={index}
-                description={tab.description}
-                title={tab.title}
-                src={tab.src}
-              />
-            );
-          })}
-        </FlexWrapper>
+        <ul>
+          <AnimatePresence>
+            {filteredProjects.map((project, index) => {
+              return (
+                <motion.li
+                  layout
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  style={{ display: 'flex' }}
+                >
+                  <Project
+                    description={project.description}
+                    title={project.title}
+                    src={project.src}
+                  />
+                </motion.li>
+              );
+            })}
+          </AnimatePresence>
+        </ul>
       </Container>
     </S.Projects>
   );

@@ -1,5 +1,4 @@
 import { SectionTitle } from '../../../components/SectionTitle';
-import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Project } from './project/Project';
 import project1Path from '../../../assets/images/project-1.jpg';
 import project2Path from '../../../assets/images/project-2.jpg';

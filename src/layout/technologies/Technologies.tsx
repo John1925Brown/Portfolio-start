@@ -24,8 +24,8 @@ export const Technologies: React.FC<{ skills: Array<TypeSkill> }> = ({
           <FlexWrapper direction="column" align="center" gap="25px">
             {skills.map((skill, index) => {
               return (
-                <Fade cascade={true} damping={0.5}>
-                  <li key={index}>
+                <Fade key={index} cascade={true} damping={0.5}>
+                  <li>
                     <S.ProgressText>{skill.valueTitle}</S.ProgressText>
                     <progress max="100" value={skill.value}></progress>
                   </li>

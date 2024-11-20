@@ -3,11 +3,11 @@ import { Icon } from '../icon/Icon';
 import React from 'react';
 import { S } from './AccountsGroup_Styles';
 
-
 type TypeImage = {
   iconId: string;
   width: number;
   height: number;
+  path?: string | '#';
 };
 
 export const AccountsGroup: React.FC<{ svgGroup: Array<TypeImage> }> = (props: {
@@ -17,7 +17,7 @@ export const AccountsGroup: React.FC<{ svgGroup: Array<TypeImage> }> = (props: {
     <S.AccountsGroup>
       {props.svgGroup.map((image, index) => {
         return (
-          <a href="#" key={index}>
+          <a href={image.path} target="__blank" key={index}>
             <Icon
               iconId={image.iconId}
               width={image.width}
@@ -29,4 +29,3 @@ export const AccountsGroup: React.FC<{ svgGroup: Array<TypeImage> }> = (props: {
     </S.AccountsGroup>
   );
 };
-

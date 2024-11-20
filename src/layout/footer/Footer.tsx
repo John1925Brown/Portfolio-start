@@ -4,21 +4,24 @@ import { Container } from '../../components/Container';
 import React from 'react';
 import { S } from './Footer_Styles';
 
-const techsSvgsGroup = [
+const footerSvgsGroup = [
   {
     width: 35,
     height: 35,
     iconId: 'codeGithub',
+    path: 'https://github.com/john1925brown',
   },
   {
     width: 35,
     height: 35,
     iconId: 'codeLinkedin',
+    path: 'https://www.linkedin.com/in/dzmitry-yarasheuski-63714a282/',
   },
   {
     width: 35,
     height: 35,
     iconId: 'codeTelegram',
+    path: 'https://t.me/John25Brown',
   },
 ];
 
@@ -40,7 +43,7 @@ export const Footer: React.FC = () => {
             </S.ContactsText>
           </S.ContactsGroup>
 
-          <AccountsGroup svgGroup={techsSvgsGroup} />
+          <AccountsGroup svgGroup={footerSvgsGroup} />
         </FlexWrapper>
       </Container>
     </S.StyledFooter>

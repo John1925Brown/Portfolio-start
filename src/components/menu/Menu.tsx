@@ -10,16 +10,19 @@ const headerSvgsGroup = [
     width: 35,
     height: 30,
     iconId: 'codeGithub',
+    path: 'https://github.com/john1925brown',
   },
   {
     width: 35,
     height: 30,
     iconId: 'codeLinkedin',
+    path: 'https://www.linkedin.com/in/dzmitry-yarasheuski-63714a282/',
   },
   {
     width: 35,
     height: 30,
     iconId: 'codeTelegram',
+    path: 'https://t.me/John25Brown',
   },
 ];
 

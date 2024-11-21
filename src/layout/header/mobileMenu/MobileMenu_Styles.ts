@@ -66,22 +66,20 @@ const BurgerBtn = styled.button<{ isOpen: boolean }>`
 
 const MobileMenuPopup = styled.nav<{ isOpen: boolean }>`
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 100000;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(15, 22, 36, 0.9);
-  display: flex;
   justify-content: center;
-  transform: translateY(-100%);
-  transition: 0.5s;
 
   ${(props) =>
     props.isOpen &&
     css`
-      transform: translateY(0);
+      display: flex;
     `}
 
   ul {

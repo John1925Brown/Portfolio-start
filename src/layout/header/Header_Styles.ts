@@ -3,7 +3,7 @@ import { theme } from '../../styles/Theme';
 
 const Header = styled.header`
   position: fixed;
-  z-index: 9999;
+  z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,7 +12,7 @@ const Header = styled.header`
   padding-bottom: 25px;
   margin-bottom: 100px;
   transition: 0.3s;
-  
+
   @media ${theme.media.tablet} {
     margin-bottom: 0;
   }

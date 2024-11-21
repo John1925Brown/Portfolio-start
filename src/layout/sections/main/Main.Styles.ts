@@ -5,6 +5,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 
 const Main = styled.section`
   position: relative;
+  padding-top: 175px;
   div > div {
     @media ${theme.media.tablet} {
       flex-direction: column;

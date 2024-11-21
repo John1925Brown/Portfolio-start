@@ -1,5 +1,5 @@
-import { Link } from "react-scroll";
-import styled, { css } from "styled-components";
+import { Link } from 'react-scroll';
+import styled, { css } from 'styled-components';
 
 const BurgerBtn = styled.button<{ isOpen: boolean }>`
   width: 36px;
@@ -70,7 +70,8 @@ const MobileMenuPopup = styled.nav<{ isOpen: boolean }>`
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100000;
+  height: 100%;
   background-color: rgba(15, 22, 36, 0.9);
   display: flex;
   justify-content: center;
